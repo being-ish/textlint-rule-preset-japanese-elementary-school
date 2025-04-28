@@ -10,6 +10,12 @@ tester.run("kanji-needs-ruby", rule, {
     "これは<ruby>漢字<rt>かんじ</rt></ruby>です。",
     "- リストでも<ruby>検出<rt>検出</rt></ruby>します。",
     "ルビ<ruby>非対応<rp>(</rp><rt>ひたいおう</rt><rp>)</rp></ruby>ビューアーもいけます。",
+    "# <ruby>見出<rt>みだ</rt>し</ruby>も OK 。",
+    `
+      | <ruby>表<rt>ひょう</rt></ruby> |
+      |---|
+      | テーブルにも<ruby>対応<rt>たいおう</rt></ruby> |
+    `,
   ],
   invalid: [
     {
