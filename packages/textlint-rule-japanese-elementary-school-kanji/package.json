@@ -12,10 +12,13 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node test.ts"
   },
   "devDependencies": {
+    "@textlint/types": "^14.6.0",
     "@tsconfig/recommended": "^1.0.8",
+    "textlint-tester": "^14.6.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
