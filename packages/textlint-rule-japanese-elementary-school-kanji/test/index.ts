@@ -1,5 +1,5 @@
 import TextLintTester from "textlint-tester";
-import rule from "./index";
+import rule from "../src";
 
 const tester = new TextLintTester();
 

@@ -3,7 +3,7 @@
  * 小学校で習う漢字のみが使われているかどうかをチェックする
  */
 
-import kanjisJson from "./kanjis.json";
+import kanjisJson from "../kanjis.json";
 import type { TextlintRuleModule } from "@textlint/types";
 
 const kanjis = new Set<string>(Object.values(kanjisJson).flat());
