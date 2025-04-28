@@ -10,8 +10,13 @@
     "textlint",
     "textlint-rule"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
   "scripts": {
+    "build": "textlint-scripts build",
     "test": "textlint-scripts test"
   },
   "devDependencies": {
