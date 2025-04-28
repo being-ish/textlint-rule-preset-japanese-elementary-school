@@ -13,8 +13,8 @@ const rule: TextlintRuleModule = (context) => {
   return {
     [Syntax.Str](node) {
       const text = getSource(node);
-      // 漢字のUnicode範囲
-      const kanjiRegex = /[一-龯々]/g;
+      // 漢字のUnicode範囲（U+4E00〜U+9FAF、U+3005）
+      const kanjiRegex = /[\u4E00-\u9FAF\u3005]/g;
       let match: RegExpExecArray | null;
       while ((match = kanjiRegex.exec(text)) !== null) {
         const char = match[0];
