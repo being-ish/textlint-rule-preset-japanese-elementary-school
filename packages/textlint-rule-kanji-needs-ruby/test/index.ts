@@ -13,14 +13,19 @@ tester.run("kanji-needs-ruby", rule, {
   ],
   invalid: [
     {
-      // ルビが必要な漢字にルビが付いていない例
       text: "これは漢字です。",
       errors: [
         {
-          message: "「漢」にルビを振ってください",
+          message: "「これは漢字です。」にルビを振ってください",
         },
+      ],
+    },
+    {
+      // rt 要素がない ruby 要素の場合
+      text: "これは<ruby>漢字</ruby>です。",
+      errors: [
         {
-          message: "「字」にルビを振ってください",
+          message: "「漢字」にルビを振ってください",
         },
       ],
     },

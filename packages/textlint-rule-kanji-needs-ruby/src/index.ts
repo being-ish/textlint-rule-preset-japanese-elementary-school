@@ -1,41 +1,66 @@
-import { TextlintRuleModule } from "@textlint/types";
+import { TxtParagraphNode } from "@textlint/ast-node-types";
+import type { TextlintRuleModule } from "@textlint/types";
+import { parseFragment, DefaultTreeAdapterTypes } from "parse5";
 
-// ルビ要素の範囲を取得
-function getRubyRanges(text: string): [number, number][] {
-  const ranges: [number, number][] = [];
-  // <ruby>タグ全体を取得
-  const rubyRegex = /<ruby>[\s\S]*?<\/ruby>/g;
-  let match;
-  while ((match = rubyRegex.exec(text)) !== null) {
-    // <rt>要素が含まれている場合のみルビ範囲とみなす
-    if (/<rt>[\s\S]*?<\/rt>/.test(match[0])) {
-      ranges.push([match.index, match.index + match[0].length]);
-    }
+function walk(
+  node: DefaultTreeAdapterTypes.Node,
+  callback: (node: DefaultTreeAdapterTypes.Node) => void
+) {
+  callback(node);
+  if ("childNodes" in node && node.childNodes) {
+    node.childNodes.forEach((child) => walk(child, callback));
   }
-  return ranges;
 }
 
-// その位置がルビ範囲内か判定
-function isInRubyRanges(index: number, ranges: [number, number][]) {
-  return ranges.some(([start, end]) => index >= start && index < end);
+function containsKanji(text: string): boolean {
+  return /\p{Script=Han}/u.test(text);
+}
+
+function hasRubyAncestor(node: DefaultTreeAdapterTypes.ChildNode): boolean {
+  let current = node.parentNode;
+  while (current) {
+    if (current.nodeName === "ruby" && hasRTChild(current)) {
+      return true;
+    }
+    if ("parentNode" in current) {
+      current = current.parentNode;
+    } else {
+      return false;
+    }
+  }
+  return false;
+}
+
+function hasRTChild(rubyNode: DefaultTreeAdapterTypes.ParentNode): boolean {
+  return rubyNode.childNodes.some((child) => child.nodeName === "rt");
 }
 
 const rule: TextlintRuleModule = (context) => {
   const { Syntax, getSource, report, RuleError } = context;
-  return {
-    [Syntax.Paragraph](node) {
-      const text = getSource(node);
-      const rubyRanges = getRubyRanges(text);
-      for (let i = 0; i < text.length; i++) {
-        const char = text[i];
-        // すべての漢字かつルビ範囲外
-        if (/\p{Script=Han}/u.test(char) && !isInRubyRanges(i, rubyRanges)) {
-          report(
-            node,
-            new RuleError(`「${char}」にルビを振ってください`, { index: i })
-          );
+
+  function checkNode(markdownNode: TxtParagraphNode) {
+    const rawText = getSource(markdownNode);
+    const documentFragment = parseFragment(rawText);
+
+    walk(documentFragment, (htmlNode) => {
+      if (htmlNode.nodeName === "#text" && "value" in htmlNode) {
+        if (containsKanji(htmlNode.value)) {
+          if (!hasRubyAncestor(htmlNode)) {
+            report(
+              markdownNode,
+              new RuleError(`「${htmlNode.value}」にルビを振ってください`, {
+                index: 0,
+              })
+            );
+          }
         }
       }
+    });
+  }
+
+  return {
+    [Syntax.Paragraph](node) {
+      checkNode(node);
     },
   };
 };
