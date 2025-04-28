@@ -1,0 +1,31 @@
+{
+  "name": "textlint-rule-japanese-elementary-school-kanji",
+  "version": "1.0.0",
+  "author": "being-ish, Inc. <dev@being-i.sh>",
+  "description": "textlint rule to ensure that only elementary-level kanji are used",
+  "license": "MIT",
+  "keywords": [
+    "japanese",
+    "kanji",
+    "textlint",
+    "textlint-rule"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "textlint-scripts build",
+    "test": "textlint-scripts test"
+  },
+  "devDependencies": {
+    "@textlint/types": "^14.6.0",
+    "@tsconfig/recommended": "^1.0.8",
+    "mocha": "^11.1.0",
+    "textlint-scripts": "^14.6.0",
+    "textlint-tester": "^14.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

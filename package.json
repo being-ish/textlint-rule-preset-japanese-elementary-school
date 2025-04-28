@@ -11,6 +11,10 @@
     "textlint-rule-preset"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "build": "npm run build --workspace=*",
+    "test": "npm run test --workspace=*"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
