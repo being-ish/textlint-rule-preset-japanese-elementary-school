@@ -16,7 +16,10 @@ function containsKanji(text: string): boolean {
   return /\p{Script=Han}/u.test(text);
 }
 
-function hasRubyAncestor(node: DefaultTreeAdapterTypes.ChildNode): boolean {
+// We think `ruby` elements that has a `rt` element are valid
+function hasValidRubyAncestor(
+  node: DefaultTreeAdapterTypes.ChildNode
+): boolean {
   let current = node.parentNode;
   while (current) {
     if (current.nodeName === "ruby" && hasRTChild(current)) {
@@ -35,6 +38,12 @@ function hasRTChild(rubyNode: DefaultTreeAdapterTypes.ParentNode): boolean {
   return rubyNode.childNodes.some((child) => child.nodeName === "rt");
 }
 
+function isTextNode(
+  node: DefaultTreeAdapterTypes.Node
+): node is DefaultTreeAdapterTypes.TextNode {
+  return node.nodeName === "#text" && "value" in node;
+}
+
 const rule: TextlintRuleModule = (context) => {
   const { Syntax, getSource, report, RuleError } = context;
 
@@ -43,9 +52,9 @@ const rule: TextlintRuleModule = (context) => {
     const documentFragment = parseFragment(rawText);
 
     walk(documentFragment, (htmlNode) => {
-      if (htmlNode.nodeName === "#text" && "value" in htmlNode) {
+      if (isTextNode(htmlNode)) {
         if (containsKanji(htmlNode.value)) {
-          if (!hasRubyAncestor(htmlNode)) {
+          if (!hasValidRubyAncestor(htmlNode)) {
             report(
               markdownNode,
               new RuleError(`「${htmlNode.value}」にルビを振ってください`, {
