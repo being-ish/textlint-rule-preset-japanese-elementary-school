@@ -1,14 +1,3 @@
 # textlint-rule-preset-japanese-elementary-school
 
-小学生が読みやすい文章かどうかをチェックするルールプリセット
-
-## ターゲット
-
-小学校 3 年生以降
-理由はひらがな、カタカナ、基礎的な漢字を習得し、文章を読む最低限の条件が揃う学年のため
-
-## ルール詳細
-
-- 小学校 6 年生までに習う漢字のみ使用可能
-- 漢字にはルビが必須
-- 語彙と文法は小学校 3 年生レベルに留める
+![preset](/packages/textlint-rule-preset-japanese-elementary-school/)
