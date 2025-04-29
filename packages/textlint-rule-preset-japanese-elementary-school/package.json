@@ -12,11 +12,18 @@
     "elementary-school"
   ],
   "files": [
+    "src/",
     "lib/"
   ],
+  "scripts": {
+    "build": "textlint-scripts build",
+    "test": "textlint-scripts test"
+  },
   "dependencies": {
-    "@textlint/module-interop": "^14.6.0",
     "textlint-rule-japanese-elementary-school-kanji": "^1.0.0",
     "textlint-rule-kanji-needs-ruby": "^1.0.0"
+  },
+  "devDependencies": {
+    "textlint-scripts": "^14.6.0"
   }
 }
