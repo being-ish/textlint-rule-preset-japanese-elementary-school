@@ -49,20 +49,22 @@ const rule: TextlintRuleModule = (context) => {
 
   function checkNode(markdownNode: TxtParagraphNode) {
     const rawText = getSource(markdownNode);
-    const documentFragment = parseFragment(rawText);
+    const documentFragment = parseFragment(rawText, {
+      sourceCodeLocationInfo: true,
+    });
 
     walk(documentFragment, (htmlNode) => {
-      if (isTextNode(htmlNode)) {
-        if (containsKanji(htmlNode.value)) {
-          if (!hasValidRubyAncestor(htmlNode)) {
-            report(
-              markdownNode,
-              new RuleError(`「${htmlNode.value}」にルビを振ってください`, {
-                index: 0,
-              })
-            );
-          }
-        }
+      if (
+        isTextNode(htmlNode) &&
+        containsKanji(htmlNode.value) &&
+        !hasValidRubyAncestor(htmlNode)
+      ) {
+        report(
+          markdownNode,
+          new RuleError(`「${htmlNode.value}」にルビを振ってください`, {
+            index: htmlNode.sourceCodeLocation?.startOffset ?? 0,
+          })
+        );
       }
     });
   }
