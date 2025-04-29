@@ -5,14 +5,14 @@
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
   "main": "lib/index.js",
-  "files": [
-    "lib/"
-  ],
   "keywords": [
     "textlint",
     "textlint-rule-preset",
     "japanese",
     "elementary-school"
+  ],
+  "files": [
+    "lib/"
   ],
   "dependencies": {
     "@textlint/module-interop": "^14.6.0",

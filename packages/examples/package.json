@@ -1,0 +1,11 @@
+{
+  "name": "textlint-rule-preset-japanese-elementary-school-examples",
+  "private": true,
+  "scripts": {
+    "test": "textlint README.md"
+  },
+  "devDependencies": {
+    "textlint": "^14.6.0",
+    "textlint-rule-preset-japanese-elementary-school": "^1.0.0"
+  }
+}
