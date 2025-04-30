@@ -20,6 +20,7 @@
     "test": "echo 'No tests specified' && exit 0"
   },
   "dependencies": {
+    "@textlint/module-interop": "^14.6.0",
     "textlint-rule-japanese-elementary-school-kanji": "^2.0.0",
     "textlint-rule-kanji-needs-ruby": "^2.0.0"
   },
