@@ -1,14 +1,13 @@
 {
   "name": "textlint-rule-preset-japanese-elementary-school",
-  "version": "1.0.0",
+  "private": true,
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule preset to lint text for Japanese elementary school students",
   "license": "MIT",
   "keywords": [
     "elementary-school",
     "japanese",
-    "textlint",
-    "textlint-rule-preset"
+    "textlintrule"
   ],
   "scripts": {
     "build": "npm run build --workspace=*",

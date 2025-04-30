@@ -1,15 +1,13 @@
 {
-  "name": "textlint-rule-kanji-needs-ruby",
-  "version": "2.0.1",
+  "name": "@being-ish/textlint-rule-kanji-needs-ruby",
+  "version": "2.0.2",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule to check if kanji have ruby annotations",
   "license": "MIT",
   "keywords": [
     "japanese",
     "kanji",
-    "ruby",
-    "textlint",
-    "textlint-rule"
+    "textlintrule"
   ],
   "main": "lib/index.js",
   "files": [
