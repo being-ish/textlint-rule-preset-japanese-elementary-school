@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-preset-japanese-elementary-school",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "textlint rule preset for Japanese elementary school level writing",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
