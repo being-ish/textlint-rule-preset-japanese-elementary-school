@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "textlint-scripts build",
+    "prebuild": "rm -rf lib",
     "test": "echo 'No tests specified' && exit 0"
   },
   "dependencies": {
