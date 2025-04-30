@@ -1,5 +1,11 @@
 # textlint-rule-kanji-needs-ruby
 
+## 2.0.2
+
+### Patch Changes
+
+- scoping
+
 ## 2.0.1
 
 ### Patch Changes
