@@ -12,9 +12,13 @@
   ],
   "scripts": {
     "build": "npm run build --workspace=*",
-    "test": "npm run test --workspace=*"
+    "test": "npm run test --workspace=*",
+    "changeset": "changeset"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2"
+  }
 }

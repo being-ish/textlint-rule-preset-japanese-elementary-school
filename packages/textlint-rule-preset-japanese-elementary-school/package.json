@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-preset-japanese-elementary-school",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "textlint rule preset for Japanese elementary school level writing",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
@@ -17,11 +17,13 @@
   ],
   "scripts": {
     "build": "textlint-scripts build",
+    "prebuild": "rm -rf lib",
     "test": "echo 'No tests specified' && exit 0"
   },
   "dependencies": {
-    "textlint-rule-japanese-elementary-school-kanji": "^1.0.0",
-    "textlint-rule-kanji-needs-ruby": "^1.0.0"
+    "@textlint/module-interop": "^14.6.0",
+    "textlint-rule-japanese-elementary-school-kanji": "^2.0.1",
+    "textlint-rule-kanji-needs-ruby": "^2.0.1"
   },
   "devDependencies": {
     "textlint-scripts": "^14.6.0"
