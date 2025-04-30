@@ -13,7 +13,8 @@
   "main": "lib/index.js",
   "files": [
     "lib/",
-    "src/"
+    "src/",
+    "kanjis.json"
   ],
   "scripts": {
     "build": "textlint-scripts build",
