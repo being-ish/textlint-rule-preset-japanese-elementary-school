@@ -1,4 +1,8 @@
-import { TxtParagraphNode } from "@textlint/ast-node-types";
+import {
+  TxtHeaderNode,
+  TxtParagraphNode,
+  TxtTableCellNode,
+} from "@textlint/ast-node-types";
 import type { TextlintRuleModule } from "@textlint/types";
 import { parseFragment, DefaultTreeAdapterTypes } from "parse5";
 
@@ -47,7 +51,9 @@ function isTextNode(
 const rule: TextlintRuleModule = (context) => {
   const { Syntax, getSource, report, RuleError } = context;
 
-  function checkNode(markdownNode: TxtParagraphNode) {
+  function checkNode(
+    markdownNode: TxtParagraphNode | TxtHeaderNode | TxtTableCellNode
+  ) {
     const rawText = getSource(markdownNode);
     const documentFragment = parseFragment(rawText, {
       sourceCodeLocationInfo: true,
@@ -71,6 +77,12 @@ const rule: TextlintRuleModule = (context) => {
 
   return {
     [Syntax.Paragraph](node) {
+      checkNode(node);
+    },
+    [Syntax.Header](node) {
+      checkNode(node);
+    },
+    [Syntax.TableCell](node) {
       checkNode(node);
     },
   };
