@@ -13,6 +13,7 @@ tester.run("kanji-needs-ruby", rule, {
     `| <ruby>表<rt>ひょう</rt></ruby> |
 |---|
 | テーブルにも<ruby>対応<rt>たいおう</rt></ruby> |`,
+    "<ruby>`漢字`<rt>`かんじ`</rt></ruby>はコードですがルビが<ruby>必要<rt>ひつよう</rt></ruby>です。",
   ],
   invalid: [
     {
