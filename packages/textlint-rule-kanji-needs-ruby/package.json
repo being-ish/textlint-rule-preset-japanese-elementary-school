@@ -1,6 +1,6 @@
 {
   "name": "@being-ish/textlint-rule-kanji-needs-ruby",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule to check if kanji have ruby annotations",
   "license": "MIT",

@@ -1,5 +1,12 @@
 # textlint-rule-kanji-needs-ruby
 
+## 2.1.0
+
+### Minor Changes
+
+- - improve README
+  - add Header and TableCell as targets to check kanji has ruby
+
 ## 2.0.2
 
 ### Patch Changes
