@@ -1,5 +1,11 @@
 # textlint-rule-preset-japanese-elementary-school
 
+## 1.1.0
+
+### Minor Changes
+
+- upgrade kanji-needs-ruby rule
+
 ## 1.0.6
 
 ### Patch Changes
