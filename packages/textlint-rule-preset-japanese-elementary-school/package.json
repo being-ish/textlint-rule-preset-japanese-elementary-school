@@ -17,8 +17,9 @@
   ],
   "scripts": {
     "build": "textlint-scripts build",
-    "prebuild": "rm -rf lib",
-    "test": "echo 'No tests specified' && exit 0"
+    "prebuild": "npm run clean",
+    "test": "echo 'No tests yet' && exit 0",
+    "clean": "rm -rf lib"
   },
   "dependencies": {
     "@textlint/module-interop": "^14.6.0",

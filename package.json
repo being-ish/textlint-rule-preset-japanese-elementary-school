@@ -12,7 +12,9 @@
   "scripts": {
     "build": "npm run build --workspace=*",
     "test": "npm run test --workspace=*",
-    "changeset": "changeset"
+    "pretest": "npm run build",
+    "changeset": "changeset",
+    "clean": "npm run clean --workspace=*"
   },
   "workspaces": [
     "packages/*"
