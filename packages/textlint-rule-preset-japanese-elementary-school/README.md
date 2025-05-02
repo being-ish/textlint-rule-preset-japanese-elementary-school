@@ -12,6 +12,9 @@
 
 - [小学校 6 年生までに習う漢字のみ使用可能](/packages/textlint-rule-japanese-elementary-school-kanji/)
 - [漢字にはルビが必須](/packages/textlint-rule-kanji-needs-ruby/)
+- [1 文の長さはルビを含めて 80 文字以内](https://github.com/textlint-rule/textlint-rule-sentence-length)
+  - ルビは読み部分も含めてカウントされる
+    - `<ruby>漢字<rt>かんじ</rt></ruby>` -> 漢字かんじ として長さチェックが走る
 - 語彙と文法は小学校 3 年生レベルに留める
 
 ## 使用方法
