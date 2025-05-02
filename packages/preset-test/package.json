@@ -5,7 +5,9 @@
   "description": "test for textlint-rule-preset-japanese-elementary-school",
   "license": "MIT",
   "scripts": {
-    "test": "textlint README.md"
+    "build": "echo 'No task to build'",
+    "test": "textlint README.md",
+    "clean": "echo 'No task to clean'"
   },
   "devDependencies": {
     "@being-ish/textlint-rule-preset-japanese-elementary-school": "^1.1.0",

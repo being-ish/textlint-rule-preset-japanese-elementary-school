@@ -16,8 +16,9 @@
   ],
   "scripts": {
     "build": "textlint-scripts build",
-    "prebuild": "rm -rf lib",
-    "test": "textlint-scripts test"
+    "prebuild": "npm run clean",
+    "test": "textlint-scripts test",
+    "clean": "rm -rf lib"
   },
   "devDependencies": {
     "@textlint/types": "^14.6.0",
