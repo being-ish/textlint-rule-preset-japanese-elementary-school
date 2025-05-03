@@ -1,18 +1,23 @@
 {
   "name": "@being-ish/textlint-rule-kanji-needs-ruby",
   "version": "2.1.1",
-  "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule to check if kanji have ruby annotations",
+  "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
   "keywords": [
+    "textlintrule",
     "japanese",
-    "kanji",
-    "textlintrule"
+    "kanji"
   ],
+  "repository": {
+    "type": "git",
+    "url": "being-ish/textlint-rule-preset-japanese-elementary-school",
+    "directory": "packages/textlint-rule-kanji-needs-ruby"
+  },
   "main": "lib/index.js",
   "files": [
-    "lib/",
-    "src/"
+    "src/",
+    "lib/"
   ],
   "scripts": {
     "build": "textlint-scripts build",

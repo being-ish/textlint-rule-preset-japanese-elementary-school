@@ -1,18 +1,23 @@
 {
   "name": "@being-ish/textlint-rule-japanese-elementary-school-kanji",
   "version": "2.1.0",
-  "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule to ensure that only elementary-level kanji are used",
+  "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
   "keywords": [
+    "textlintrule",
     "japanese",
-    "kanji",
-    "textlintrule"
+    "kanji"
   ],
+  "repository": {
+    "type": "git",
+    "url": "being-ish/textlint-rule-preset-japanese-elementary-school",
+    "directory": "packages/textlint-rule-japanese-elementary-school-kanji"
+  },
   "main": "lib/index.js",
   "files": [
-    "lib/",
     "src/",
+    "lib/",
     "kanjis.json"
   ],
   "scripts": {
