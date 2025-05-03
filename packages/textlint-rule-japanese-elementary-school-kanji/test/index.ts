@@ -4,7 +4,7 @@ import rule from "../src";
 const tester = new TextLintTester();
 
 tester.run("japanese-elementary-school-kanji", rule, {
-  valid: ["今日はいい天気です。", "私は学生です。"],
+  valid: ["今日はいい天気です。", "私は良い学生です。"],
   invalid: [
     {
       // 「彼」と「秀」は小学生で習う範囲外の漢字
