@@ -1,5 +1,11 @@
 # textlint-rule-japanese-elementary-school-kanji
 
+## 2.1.3
+
+### Patch Changes
+
+- update / remove deps
+
 ## 2.1.2
 
 ### Patch Changes
