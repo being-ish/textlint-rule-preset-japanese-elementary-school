@@ -19,6 +19,9 @@ function isValidGrade(grade: unknown): grade is Options["maxGrade"] {
   );
 }
 
+// Unicode mode regex to find all kanji characters
+const KANJI_REGEX = /\p{Script=Han}/gu;
+
 const rule: TextlintRuleModule<Options> = (context, options = {}) => {
   const { Syntax, getSource, RuleError, report } = context;
   const actualOptions = { ...DEFAULT_OPTIONS, ...options };
@@ -37,10 +40,8 @@ const rule: TextlintRuleModule<Options> = (context, options = {}) => {
   return {
     [Syntax.Str](node) {
       const text = getSource(node);
-      // Unicode mode regex to find all kanji characters
-      const kanjiRegex = /\p{Script=Han}/gu;
       let match: RegExpExecArray | null;
-      while ((match = kanjiRegex.exec(text)) !== null) {
+      while ((match = KANJI_REGEX.exec(text)) !== null) {
         const char = match[0];
         if (!allowedKanjis.has(char)) {
           report(
