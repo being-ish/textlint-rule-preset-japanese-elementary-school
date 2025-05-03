@@ -1,6 +1,6 @@
 {
   "name": "@being-ish/textlint-rule-japanese-elementary-school-kanji",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "textlint rule to ensure that only elementary-level kanji are used",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",

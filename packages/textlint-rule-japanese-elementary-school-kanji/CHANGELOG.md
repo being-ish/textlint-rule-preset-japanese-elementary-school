@@ -1,5 +1,12 @@
 # textlint-rule-japanese-elementary-school-kanji
 
+## 2.1.1
+
+### Patch Changes
+
+- add some metadata
+- mv devDependencies to dependencies
+
 ## 2.1.0
 
 ### Minor Changes
@@ -10,8 +17,8 @@
 
 ### Patch Changes
 
-- - improve README
-  - add Header and TableCell as targets to check kanji has ruby
+- improve README
+- add Header and TableCell as targets to check kanji has ruby
 
 ## 2.0.2
 
