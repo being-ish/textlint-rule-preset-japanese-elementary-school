@@ -22,7 +22,7 @@
     "clean": "rm -rf lib"
   },
   "dependencies": {
-    "@being-ish/textlint-rule-japanese-elementary-school-kanji": "^2.0.3",
+    "@being-ish/textlint-rule-japanese-elementary-school-kanji": "^2.1.0",
     "@being-ish/textlint-rule-kanji-needs-ruby": "^2.1.1",
     "@textlint/module-interop": "^14.6.0",
     "textlint-rule-no-double-negative-ja": "^2.0.1",
