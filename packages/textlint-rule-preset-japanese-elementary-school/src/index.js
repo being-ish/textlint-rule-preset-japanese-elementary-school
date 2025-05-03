@@ -14,6 +14,9 @@ module.exports = {
     "no-double-negative-ja": moduleInterop(
       require("textlint-rule-no-double-negative-ja")
     ),
+    "no-mix-dearu-desumasu": moduleInterop(
+      require("textlint-rule-no-mix-dearu-desumasu")
+    ),
   },
   rulesConfig: {
     "japanese-elementary-school-kanji": true,
@@ -31,5 +34,8 @@ module.exports = {
       countBy: "codepoints",
     },
     "no-double-negative-ja": true,
+    "no-mix-dearu-desumasu": {
+      strict: true,
+    },
   },
 };

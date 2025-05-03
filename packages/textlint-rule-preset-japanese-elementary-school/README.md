@@ -16,6 +16,12 @@
   - ルビは読み部分も含めてカウントされる
     - `<ruby>漢字<rt>かんじ</rt></ruby>` -> 漢字かんじ として長さチェックが走る
 - [二重否定を使わない](https://github.com/textlint-ja/textlint-rule-no-double-negative-ja)
+- [常体と敬体の統一](https://github.com/textlint-ja/textlint-rule-no-mix-dearu-desumasu)
+  | 場所 | 敬体 / 常体 |
+  | -------- | ------------------------------ |
+  | ヘッダー | どちらかに統一されていれば良い |
+  | 本文 | 敬体 |
+  | リスト | 常体 |
 
 ## 使用方法
 

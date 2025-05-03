@@ -29,6 +29,7 @@
     "textlint-rule-sentence-length": "^5.2.0"
   },
   "devDependencies": {
+    "textlint-rule-no-mix-dearu-desumasu": "^6.0.4",
     "textlint-scripts": "^14.6.0"
   }
 }
