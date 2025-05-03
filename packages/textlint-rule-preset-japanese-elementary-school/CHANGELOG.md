@@ -1,5 +1,11 @@
 # textlint-rule-preset-japanese-elementary-school
 
+## 1.2.3
+
+### Patch Changes
+
+- update deps
+
 ## 1.2.2
 
 ### Patch Changes

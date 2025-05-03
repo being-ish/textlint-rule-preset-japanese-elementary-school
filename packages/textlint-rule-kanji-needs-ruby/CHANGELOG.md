@@ -1,5 +1,11 @@
 # textlint-rule-kanji-needs-ruby
 
+## 2.1.4
+
+### Patch Changes
+
+- report error when rt element has no text
+
 ## 2.1.3
 
 ### Patch Changes
