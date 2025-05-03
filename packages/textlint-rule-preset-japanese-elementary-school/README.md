@@ -24,7 +24,7 @@
   | リスト | 常体 |
 - [同じ助詞を連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-joshi)
 - [逆接の「が」は 1 文に 1 回のみ](https://github.com/textlint-ja/textlint-rule-no-doubled-conjunctive-particle-ga)
-- [段落内で同じ接続しを連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-conjunction)
+- [段落内で同じ接続詞を連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-conjunction)
 
 ## 使用方法
 
