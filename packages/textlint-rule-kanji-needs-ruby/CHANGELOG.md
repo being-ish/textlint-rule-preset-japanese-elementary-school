@@ -1,5 +1,11 @@
 # textlint-rule-kanji-needs-ruby
 
+## 2.1.5
+
+### Patch Changes
+
+- update / remove deps
+
 ## 2.1.4
 
 ### Patch Changes
