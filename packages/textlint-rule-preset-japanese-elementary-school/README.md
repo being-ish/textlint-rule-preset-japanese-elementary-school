@@ -15,7 +15,7 @@
 - [1 文の長さはルビを含めて 80 文字以内](https://github.com/textlint-rule/textlint-rule-sentence-length)
   - ルビは読み部分も含めてカウントされる
     - `<ruby>漢字<rt>かんじ</rt></ruby>` -> 漢字かんじ として長さチェックが走る
-- 語彙と文法は小学校 3 年生レベルに留める
+- [二重否定を使わない](https://github.com/textlint-ja/textlint-rule-no-double-negative-ja)
 
 ## 使用方法
 

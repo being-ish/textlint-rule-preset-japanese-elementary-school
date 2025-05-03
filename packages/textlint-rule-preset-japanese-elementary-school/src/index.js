@@ -11,6 +11,9 @@ module.exports = {
       require("@being-ish/textlint-rule-kanji-needs-ruby")
     ),
     "sentence-length": moduleInterop(require("textlint-rule-sentence-length")),
+    "no-double-negative-ja": moduleInterop(
+      require("textlint-rule-no-double-negative-ja")
+    ),
   },
   rulesConfig: {
     "japanese-elementary-school-kanji": true,
@@ -27,5 +30,6 @@ module.exports = {
       max: 80,
       countBy: "codepoints",
     },
+    "no-double-negative-ja": true,
   },
 };
