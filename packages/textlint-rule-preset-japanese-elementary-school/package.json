@@ -25,15 +25,13 @@
     "@being-ish/textlint-rule-japanese-elementary-school-kanji": "^2.1.0",
     "@being-ish/textlint-rule-kanji-needs-ruby": "^2.1.1",
     "@textlint/module-interop": "^14.6.0",
-    "textlint-rule-no-double-negative-ja": "^2.0.1",
-    "textlint-rule-sentence-length": "^5.2.0"
-  },
-  "devDependencies": {
     "textlint-rule-max-ten": "^5.0.0",
+    "textlint-rule-no-double-negative-ja": "^2.0.1",
     "textlint-rule-no-doubled-conjunction": "^3.0.0",
     "textlint-rule-no-doubled-conjunctive-particle-ga": "^3.0.0",
     "textlint-rule-no-doubled-joshi": "^5.1.0",
     "textlint-rule-no-mix-dearu-desumasu": "^6.0.4",
+    "textlint-rule-sentence-length": "^5.2.0",
     "textlint-scripts": "^14.6.0"
   }
 }
