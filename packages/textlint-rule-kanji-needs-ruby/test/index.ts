@@ -7,6 +7,7 @@ const tester = new TextLintTester();
 tester.run("kanji-needs-ruby", rule, {
   valid: [
     "これは<ruby>漢字<rt>かんじ</rt></ruby>です。",
+    "これは<ruby>漢字<rt>**かんじ**</rt></ruby>です。",
     "ルビ<ruby>非対応<rp>(</rp><rt>ひたいおう</rt><rp>)</rp></ruby>ビューアーもいけます。",
     "- リストでも<ruby>検出<rt>検出</rt></ruby>します。",
     "# <ruby>見出<rt>みだ</rt>し</ruby>も OK 。",
@@ -27,6 +28,15 @@ tester.run("kanji-needs-ruby", rule, {
     {
       // rt 要素がない ruby 要素の場合
       text: "これは<ruby>漢字</ruby>です。",
+      errors: [
+        {
+          message: "「漢字」にルビを振ってください",
+        },
+      ],
+    },
+    {
+      // rt 要素が空の ruby 要素の場合
+      text: "これは<ruby>漢字<rt></rt></ruby>です。",
       errors: [
         {
           message: "「漢字」にルビを振ってください",

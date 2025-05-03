@@ -16,6 +16,12 @@ function walk(
   }
 }
 
+function isTextNode(
+  node: DefaultTreeAdapterTypes.Node
+): node is DefaultTreeAdapterTypes.TextNode {
+  return node.nodeName === "#text" && "value" in node;
+}
+
 function containsKanji(text: string): boolean {
   return /\p{Script=Han}/u.test(text);
 }
@@ -39,13 +45,21 @@ function hasValidRubyAncestor(
 }
 
 function hasRTChild(rubyNode: DefaultTreeAdapterTypes.ParentNode): boolean {
-  return rubyNode.childNodes.some((child) => child.nodeName === "rt");
+  return rubyNode.childNodes.some(
+    (child) => child.nodeName === "rt" && hasNonEmptyText(child)
+  );
 }
 
-function isTextNode(
-  node: DefaultTreeAdapterTypes.Node
-): node is DefaultTreeAdapterTypes.TextNode {
-  return node.nodeName === "#text" && "value" in node;
+function hasNonEmptyText(node: DefaultTreeAdapterTypes.Node): boolean {
+  if (isTextNode(node) && node.value.trim().length > 0) {
+    return true;
+  }
+
+  if ("childNodes" in node && node.childNodes) {
+    return node.childNodes.some((child) => hasNonEmptyText(child));
+  }
+
+  return false;
 }
 
 const rule: TextlintRuleModule = (context) => {
