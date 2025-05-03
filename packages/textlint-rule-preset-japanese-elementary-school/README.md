@@ -25,6 +25,7 @@
 - [同じ助詞を連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-joshi)
 - [逆接の「が」は 1 文に 1 回のみ](https://github.com/textlint-ja/textlint-rule-no-doubled-conjunctive-particle-ga)
 - [段落内で同じ接続詞を連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-conjunction)
+- [読点は 1 文に 3 つまで](https://github.com/textlint-ja/textlint-rule-max-ten)
 
 ## 使用方法
 

@@ -26,6 +26,7 @@ module.exports = {
     "no-doubled-conjunction": moduleInterop(
       require("textlint-rule-no-doubled-conjunction")
     ),
+    "max-ten": moduleInterop(require("textlint-rule-max-ten")),
   },
   rulesConfig: {
     "japanese-elementary-school-kanji": true,
@@ -49,5 +50,6 @@ module.exports = {
     "no-doubled-joshi": true,
     "no-doubled-conjunctive-particle-ga": true,
     "no-doubled-conjunction": true,
+    "max-ten": true,
   },
 };
