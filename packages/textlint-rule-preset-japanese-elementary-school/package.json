@@ -4,13 +4,17 @@
   "description": "textlint rule preset for Japanese elementary school level writing",
   "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
-  "main": "lib/index.js",
   "keywords": [
-    "textlint",
-    "textlint-rule-preset",
+    "textlintrule",
     "japanese",
-    "elementary-school"
+    "elementaryschool"
   ],
+  "repository": {
+    "type": "git",
+    "url": "being-ish/textlint-rule-preset-japanese-elementary-school",
+    "directory": "packages/textlint-rule-preset-japanese-elementary-school"
+  },
+  "main": "lib/index.js",
   "files": [
     "src/",
     "lib/"
