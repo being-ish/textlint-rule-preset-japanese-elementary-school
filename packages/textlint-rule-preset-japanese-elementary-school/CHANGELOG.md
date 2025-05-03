@@ -1,5 +1,21 @@
 # textlint-rule-preset-japanese-elementary-school
 
+## 1.2.0
+
+### Minor Changes
+
+- add some rules
+
+  - sentence-length
+  - no-double-negative-ja
+  - no-mix-dearu-desumasu
+  - no-doubled-joshi
+  - no-doubled-conjunctive-particle-ja
+  - no-doubled-conjunction
+  - max-ten
+
+  update japanese-elementary-school-kanji rule
+
 ## 1.1.0
 
 ### Minor Changes

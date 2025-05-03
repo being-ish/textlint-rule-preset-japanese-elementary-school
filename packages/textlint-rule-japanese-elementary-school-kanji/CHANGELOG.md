@@ -1,5 +1,11 @@
 # textlint-rule-japanese-elementary-school-kanji
 
+## 2.1.0
+
+### Minor Changes
+
+- add option maxGrade
+
 ## 2.0.3
 
 ### Patch Changes
