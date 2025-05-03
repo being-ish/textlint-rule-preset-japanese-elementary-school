@@ -1,5 +1,12 @@
 # textlint-rule-japanese-elementary-school-kanji
 
+## 2.1.1
+
+### Patch Changes
+
+- - add some metadata
+  - mv devDependencies to dependencies
+
 ## 2.1.0
 
 ### Minor Changes

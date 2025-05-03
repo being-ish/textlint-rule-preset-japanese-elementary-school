@@ -1,5 +1,15 @@
 # textlint-rule-preset-japanese-elementary-school
 
+## 1.2.1
+
+### Patch Changes
+
+- - add some metadata
+  - mv devDependencies to dependencies
+- Updated dependencies
+  - @being-ish/textlint-rule-japanese-elementary-school-kanji@2.1.1
+  - @being-ish/textlint-rule-kanji-needs-ruby@2.1.2
+
 ## 1.2.0
 
 ### Minor Changes
