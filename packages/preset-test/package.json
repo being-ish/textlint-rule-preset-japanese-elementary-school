@@ -1,9 +1,9 @@
 {
   "name": "preset-test",
-  "private": true,
-  "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "test for textlint-rule-preset-japanese-elementary-school",
+  "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "echo 'No task to build'",
     "test": "textlint README.md",

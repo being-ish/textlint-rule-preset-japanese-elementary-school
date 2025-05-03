@@ -1,13 +1,16 @@
 {
   "name": "textlint-rule-preset-japanese-elementary-school",
-  "private": true,
-  "author": "being-ish, Inc. <dev@being-i.sh>",
   "description": "textlint rule preset to lint text for Japanese elementary school students",
+  "author": "being-ish, Inc. <dev@being-i.sh>",
   "license": "MIT",
   "keywords": [
-    "elementary-school",
+    "textlintrule",
     "japanese",
-    "textlintrule"
+    "elementaryschool"
+  ],
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
     "build": "npm run build --workspace=*",
@@ -16,9 +19,6 @@
     "changeset": "changeset",
     "clean": "npm run clean --workspace=*"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@changesets/cli": "^2.29.2"
   }
