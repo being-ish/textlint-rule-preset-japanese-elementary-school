@@ -20,6 +20,9 @@ module.exports = {
     "no-doubled-joshi": moduleInterop(
       require("textlint-rule-no-doubled-joshi")
     ),
+    "no-doubled-conjunctive-particle-ga": moduleInterop(
+      require("textlint-rule-no-doubled-conjunctive-particle-ga")
+    ),
   },
   rulesConfig: {
     "japanese-elementary-school-kanji": true,
@@ -41,5 +44,6 @@ module.exports = {
       strict: true,
     },
     "no-doubled-joshi": true,
+    "no-doubled-conjunctive-particle-ga": true,
   },
 };
