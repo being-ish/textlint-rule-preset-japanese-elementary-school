@@ -10,7 +10,7 @@
     "clean": "echo 'No task to clean'"
   },
   "devDependencies": {
-    "@being-ish/textlint-rule-preset-japanese-elementary-school": "^1.2.1",
+    "@being-ish/textlint-rule-preset-japanese-elementary-school": "^1.2.2",
     "textlint": "^14.6.0"
   }
 }

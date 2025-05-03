@@ -1,5 +1,11 @@
 # textlint-rule-japanese-elementary-school-kanji
 
+## 2.1.2
+
+### Patch Changes
+
+- add LICENSE
+
 ## 2.1.1
 
 ### Patch Changes

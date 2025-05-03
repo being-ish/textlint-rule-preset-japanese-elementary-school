@@ -1,5 +1,11 @@
 # textlint-rule-kanji-needs-ruby
 
+## 2.1.3
+
+### Patch Changes
+
+- add LICENSE
+
 ## 2.1.2
 
 ### Patch Changes
