@@ -9,7 +9,9 @@ tester.run("japanese-elementary-school-kanji", rule, {
     "私は良い学生です。",
     {
       text: "一年生では、かんたんなかん字をならいます。",
-      options: { maxGrade: 1 },
+      options: {
+        maxGrade: 1,
+      },
     },
   ],
   invalid: [
@@ -17,8 +19,12 @@ tester.run("japanese-elementary-school-kanji", rule, {
       // 「彼」と「秀」は小学生で習う範囲外の漢字
       text: "彼は優秀です。",
       errors: [
-        { message: "「彼」は小学校 6 年生までに習わない漢字です。" },
-        { message: "「秀」は小学校 6 年生までに習わない漢字です。" },
+        {
+          message: "「彼」は小学校 6 年生までに習わない漢字です。",
+        },
+        {
+          message: "「秀」は小学校 6 年生までに習わない漢字です。",
+        },
       ],
     },
     {
