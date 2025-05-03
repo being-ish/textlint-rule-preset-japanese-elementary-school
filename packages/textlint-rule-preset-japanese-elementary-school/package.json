@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@being-ish/textlint-rule-japanese-elementary-school-kanji": "^2.1.2",
-    "@being-ish/textlint-rule-kanji-needs-ruby": "^2.1.3",
+    "@being-ish/textlint-rule-kanji-needs-ruby": "^2.1.4",
     "@textlint/module-interop": "^14.6.0",
     "textlint-rule-max-ten": "^5.0.0",
     "textlint-rule-no-double-negative-ja": "^2.0.1",
