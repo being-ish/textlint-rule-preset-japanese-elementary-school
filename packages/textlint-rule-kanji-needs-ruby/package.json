@@ -31,7 +31,6 @@
     "mocha": "^11.1.0",
     "textlint-scripts": "^14.6.0",
     "textlint-tester": "^14.6.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
