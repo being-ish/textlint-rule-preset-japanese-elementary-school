@@ -17,6 +17,9 @@ module.exports = {
     "no-mix-dearu-desumasu": moduleInterop(
       require("textlint-rule-no-mix-dearu-desumasu")
     ),
+    "no-doubled-joshi": moduleInterop(
+      require("textlint-rule-no-doubled-joshi")
+    ),
   },
   rulesConfig: {
     "japanese-elementary-school-kanji": true,
@@ -37,5 +40,6 @@ module.exports = {
     "no-mix-dearu-desumasu": {
       strict: true,
     },
+    "no-doubled-joshi": true,
   },
 };

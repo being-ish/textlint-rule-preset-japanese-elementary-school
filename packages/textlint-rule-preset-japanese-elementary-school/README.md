@@ -22,6 +22,7 @@
   | ヘッダー | どちらかに統一されていれば良い |
   | 本文 | 敬体 |
   | リスト | 常体 |
+- [同じ助詞を連続で使用しない](https://github.com/textlint-ja/textlint-rule-no-doubled-joshi)
 
 ## 使用方法
 
